@@ -29,11 +29,8 @@ jobs:
       - name: Installing node
         run: actions/setup-node@v2-beta
          with:
-             node-version: 14
-             
-             
-      # Runs a set of commands using the runners shell
-      - name: Installing Surge
+             node-version: 12        
+       - name: Installing Surge
         run: npm installing --gloable surge
       - name: Deploying using surge
         run: surge ./ obese-crush.surge.sh --token ${{ secrets.MY_SECRET }}
