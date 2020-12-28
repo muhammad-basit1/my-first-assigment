@@ -30,9 +30,8 @@ jobs:
         run: actions/setup-node@v2-beta
         with: 
            node-version: 12 
-
-     - name: Installing Surge
-        run: npm installing --gloable surge
-      - name: Deploying using surge
-        run: surge ./ obese-crush.surge.sh --token ${{ secrets.MY_SECRET }}
+            - name: Installing surge
+                run: npm installing --gloable surge
+              - name: Deploying using surge
+                  run: surge ./ obese-crush.surge.sh --token ${{ secrets.MY_SECRET }}
         
